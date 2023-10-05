@@ -13,6 +13,7 @@ for (let i = 0; i<colors.length; i++) {
     var a = document.createElement('a');
     var spam = document.createElement("span");
     var rand = Math.round(-1+Math.random()*10);
+    console.log(linkText);
 
     a.appendChild(spam)
 
@@ -22,7 +23,7 @@ for (let i = 0; i<colors.length; i++) {
 
 
     var linkText = document.createTextNode(stuff[rand]);
-    console.log(linkText)
+    console.log(linkText);
     spam.appendChild(linkText);
     a.style = '--clr:'+colors[i];
     spam.style = "--clr"+colors[i];
