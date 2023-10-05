@@ -1,5 +1,8 @@
 var colors = [];
-var stuff = ["Bruh", "lol", "Sayed", "Yoo", "Amogus", "sus", "Legende", "YEEEEEE", "Banana"]
+var stuff = ["Bruh", "lol", "Yoo", "Amogus", "SUS", "David0IV0"]
+var DavidSpotify = "https://spotify.link/of1XE4A2UCb";
+
+
 
 for (let i=0; i<10; i++) {
     colors.push('#'+(0x1000000+Math.random()*0xffffff).toString(16).substr(1,6));
@@ -19,12 +22,18 @@ for (let i = 0; i<colors.length; i++) {
 
 
     var linkText = document.createTextNode(stuff[rand]);
-
+    console.log(linkText)
     spam.appendChild(linkText);
     a.style = '--clr:'+colors[i];
     spam.style = "--clr"+colors[i];
+
     a.title = stuff[rand];
-    a.href = "./index.html";
+    
+    if  (rand == 5) {
+        a.href = DavidSpotify;
+    } else {
+        a.href = "./index.html";
+    }
+
     document.body.appendChild(a);
  }
-    
